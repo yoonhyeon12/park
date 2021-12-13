@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang=ko>
+	<head>
+    <meta charset="utf-8">
+    <title>2nd page</title>
+		<style>
+		h1{text-align:center;}
+		input{background-color:transparent;}
+		div {
+            margin : 100px;
+            width :  550px;
+            height : 270px;
+        }
+		.box-solid {
+			border-style: solid;
+		}
+
+		</style>
+	</head>
+    
+	<body bgcolor="#aee19b" >
+
+		<div class="box-solid">
+        <h1> 어서오십시오.  </h1>
+		<h2> &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; 차량번호 : &nbsp;&nbsp; <input id="carnum" type="text" style="border:0 solid black;width:60px;font-size:25px;" ></h2>
+		<h2> &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; 입차시간 : &nbsp;&nbsp; <input id="hour" type="text" style="border:0 solid black;width:30px;font-size:25px;"> 시 <input id="min" type="text" style="border:0 solid black;width:30px;font-size:25px;"> 분 </h2>		
+		</div>
+		<script>
+			function from_py(i)
+			{
+				if     ( i  == 1 ) window.location.replace("page1.html");
+				else if( i  == 2 ) window.location.replace("page2.html");
+				else if( i  == 3 ) window.location.replace("page3.html");
+				else;
+				
+			}
+			
+			function from_py_carnum(car) 
+			{
+				if(car) document.getElementById('carnum').value = car;
+				else; 			
+			}
+			
+			function from_py_time_in(hour,min)
+			{	
+				if(hour) document.getElementById('hour').value = hour;
+				else; 
+				if(min) document.getElementById('min').value = min;
+				else; 								
+			}		
+
+		</script>
+	</body>
+</html>

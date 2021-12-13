@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=ko>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			h1{text-align:center;1}
+			input{background-color:transparent;}
+			div {
+				margin : 100px;
+				width :  550px;
+				height : 300px;
+			}
+			.box-solid {
+				border-style: solid;
+			}		
+		</style>
+	</head>
+    
+	<body bgcolor="ADD8E6">
+		<div class="box-solid">
+		<h1> 안녕히가십시오.  </h1>
+		<h2> &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; 차량번호 : &nbsp;&nbsp; <input id="carnum" type="text" style="border:0 solid black;width:60px;font-size:25px;" > </h2>
+		<h2> &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; 주차시간 : &nbsp;&nbsp; <input id="hour" type="text" style="border:0 solid black;width:30px;font-size:25px;"> 시 <input id="min" type="text" style="border:0 solid black;width:30px;font-size:25px;"> 분 </h2>
+		<h2> &emsp;&emsp;&emsp;&emsp;무료주차시간 :&nbsp;&nbsp; <input id="tm_free" type="text" style="border:0 solid black;width:60px;font-size:25px;" > 시간  </h2>
+		<hr>
+		<h2> &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; 주차요금 :&nbsp;&nbsp; <input id="charge" type="text" style="border:0 solid black;width:80px;font-size:25px;" > 원   </h2>
+    
+		</div>
+		<script>
+			function from_py(i)//, j)
+			{
+				if     ( i  == 1 ) window.location.replace("page1.html");
+				else if( i  == 2 ) window.location.replace("page2.html");
+				else if( i  == 3 ) window.location.replace("page3.html");
+				else;
+			}
+			
+			function from_py_carnum(car) 
+			{
+				if(car) document.getElementById('carnum').value = car;
+				else; 			
+			}
+			
+			function from_py_time_total(hour,min)
+			{
+				if(hour) document.getElementById('hour').value = hour;
+				else; 
+				if(min ) document.getElementById('min').value = min;
+				else;				
+				
+			}
+			
+			function from_py_time_free(free)
+			{
+				if(free) document.getElementById('tm_free').value = free;
+				else; 
+			}
+			
+			function from_py_charge(charge)
+			{
+				if(charge) document.getElementById('charge').value = charge;
+				else; 
+			}
+		
+		</script>
+	</body>	
+</html>
